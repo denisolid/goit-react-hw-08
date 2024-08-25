@@ -1,0 +1,21 @@
+/* src/components/ContactItem/ContactItem.module.css */
+.item {
+  display: flex;
+
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
+}
+
+.number {
+  margin-left: auto;
+}
+.item button {
+  background-color: #ff4d4d;
+  width: 150px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+}
