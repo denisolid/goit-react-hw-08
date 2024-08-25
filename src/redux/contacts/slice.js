@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { createSlice } from "@reduxjs/toolkit";
-import { addContact, deleteContact, fetchContacts } from "./contactsOps";
+import { addContact, deleteContact, fetchContacts } from "./operations";
 
 const contactsSlice = createSlice({
   name: "contacts",
@@ -10,7 +11,7 @@ const contactsSlice = createSlice({
       error: null,
     },
   },
-
+  // Додаємо обробку зовнішніх екшенів
   extraReducers: (builder) => {
     builder
       .addCase(fetchContacts.pending, (state, action) => {

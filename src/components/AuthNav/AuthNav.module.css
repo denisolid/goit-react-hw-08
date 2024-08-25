@@ -1,0 +1,13 @@
+.cont {
+  display: flex;
+  gap: 16px;
+}
+
+.link {
+  padding: 10px;
+  background-color: rgb(100, 3, 255);
+  border-radius: 5px;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+}
