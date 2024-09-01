@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import { selectIsLoggedIn } from "../auth/selectors";
 
 axios.defaults.baseURL = "https://connections-api.goit.global/";
 
@@ -7,6 +8,13 @@ export const fetchContacts = createAsyncThunk(
   "contacts/fetchAll",
   async (_, thunkAPI) => {
     try {
+      const state = thunkAPI.getState();
+      const isLogin = selectIsLoggedIn(state);
+
+      if (!isLogin) {
+        return thunkAPI.rejectWithValue("You are not logged in");
+      }
+
       const response = await axios.get("/contacts");
 
       return response.data;
@@ -28,6 +36,7 @@ export const addContact = createAsyncThunk(
     }
   }
 );
+
 export const deleteContact = createAsyncThunk(
   "contacts/deleteContact",
   async (taskId, thunkAPI) => {
