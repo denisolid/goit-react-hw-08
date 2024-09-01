@@ -14,7 +14,7 @@ const ContactsPage = () => {
     if (isLoggedIn) {
       dispatch(fetchContacts());
     }
-  });
+  }, [dispatch, isLoggedIn]);
 
   return (
     <>
