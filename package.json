@@ -16,6 +16,7 @@
     "@reduxjs/toolkit": "^2.2.7",
     "axios": "^1.7.3",
     "clsx": "^2.1.1",
+    "eventemitter3": "^5.0.1",
     "formic": "^0.0.10",
     "formik": "^2.4.6",
     "json": "^11.0.0",
