@@ -12,14 +12,14 @@ const UserMenu = () => {
   return (
     <div className={s.cont}>
       <p>Welcome {username}</p>
-      <Link
-        to="/login"
+      <button
+        
         onClick={() => {
           dispatch(logOut());
         }}
       >
         Log out
-      </Link>
+      </button>
     </div>
   );
 };
